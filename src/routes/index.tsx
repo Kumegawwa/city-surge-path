@@ -1,29 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Landing } from "@/components/landing/Landing";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "GreenWave Emergency · Onda Verde Inteligente para Emergências" },
+      {
+        name: "description",
+        content:
+          "GreenWave Emergency sincroniza semáforos em tempo real para criar uma Onda Verde Inteligente para ambulâncias, SAMU e bombeiros — reduzindo o tempo de resposta em até 55%.",
+      },
+      { property: "og:title", content: "GreenWave Emergency · Smart City para salvar vidas" },
+      {
+        property: "og:description",
+        content:
+          "Plataforma GovTech que sincroniza semáforos em tempo real para acelerar veículos de emergência.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      },
     ],
   }),
-  component: Index,
+  component: Landing,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
